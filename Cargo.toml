@@ -1,0 +1,21 @@
+[package]
+name = "simple_spawner"
+version = "0.3.0-alpha.17"
+keywords = ["futures", "async", "future", "cpu"]
+authors = ["Alex Vlasov <alex.m.vlasov@gmail.com>"]
+edition = "2018"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/matter-labs/simple_spawner"
+homepage = "https://github.com/matter-labs/simple_spawner"
+documentation = "https://github.com/matter-labs/simple_spawner"
+description = """
+Simple spawner for long-running CPU tasks that don't have any pause points.
+Spawn a task on a thread pool that starts immediately and returns a future
+that can be later polled by any other executor. Also provides old style 
+`wait()` function to be synchronously polled on the current thread.
+"""
+categories = ["asynchronous"]
+
+[dependencies]
+num_cpus = "1.0"
+futures-preview = "=0.3.0-alpha.17"
